@@ -1,0 +1,123 @@
+/* Geral */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Cabeçalho */
+header {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #457b9d;
+  color: #fff;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+header h1 span {
+  color: #ffd700;
+}
+
+header p {
+  font-size: 1.2em;
+  margin: 5px 0;
+}
+
+#totalizador {
+  margin-top: 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #ffd700;
+}
+
+/* Botão */
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #fff;
+  background-color: #1d3557;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #1d3557;
+}
+
+/* Tabela */
+.table-container {
+  margin: 20px auto;
+  max-width: 90%;
+  overflow-x: auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th {
+  background-color: #457b9d;
+  color: #fff;
+  padding: 10px;
+  font-size: 1.2em;
+  text-align: center;
+  border-radius: 5px;
+}
+
+tbody td {
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: center;
+  font-size: 1em;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tbody td:hover {
+  background-color: #e0f7fa;
+  cursor: pointer;
+}
+
+.cell.selected {
+  background-color: #28a745;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  table {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+  table {
+    font-size: 0.8em;
+  }
+}

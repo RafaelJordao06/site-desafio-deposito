@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio dos 200 Depósitos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Desafio dos <span>200</span> Depósitos</h1>
+      <p>Totalizando R$ 20.100,00</p>
+      <div id="totalizador">
+        <p>Você já investiu: <strong id="investido">R$ 0,00</strong></p>
+      </div>
+      <button id="export-pdf">Exportar para PDF</button>
+    </header>
+    <main>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th colspan="10">Tabela de Depósitos</th>
+            </tr>
+          </thead>
+          <tbody id="table-body">
+            <!-- Linhas geradas pelo JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
