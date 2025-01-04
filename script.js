@@ -1,5 +1,3 @@
-// script.js
-
 // Função para gerar a tabela
 function generateTable() {
   const tableBody = document.getElementById("table-body");
@@ -72,7 +70,7 @@ function updateTotal() {
   });
 }
 
-// Função para exportar a tela como PDF
+// Função para exportar a tela como PDF com layout de desktop
 async function exportToPDF() {
   const element = document.querySelector(".container"); // Seleciona o elemento a ser exportado
   const exportButton = document.getElementById("export-pdf"); // Botão para ocultar
@@ -80,11 +78,22 @@ async function exportToPDF() {
   // Adiciona uma classe para esconder o botão
   exportButton.classList.add("hidden");
 
+  // Define a largura fixa de desktop antes de capturar
+  const originalWidth = element.style.width;
+  const originalTransform = document.body.style.transform;
+  element.style.width = "1200px"; // Define a largura para o formato desktop
+  document.body.style.transform = "scale(1)";
+
   // Usa html2canvas para capturar a tela
   const canvas = await html2canvas(element, {
     scale: 2, // Aumenta a qualidade da imagem capturada
     useCORS: true, // Permite carregar recursos de outros domínios
+    windowWidth: 1200, // Força a largura de desktop
   });
+
+  // Restaura o layout responsivo após a captura
+  element.style.width = originalWidth;
+  document.body.style.transform = originalTransform;
 
   // Remove a classe para exibir o botão novamente
   exportButton.classList.remove("hidden");
